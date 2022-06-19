@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "StephalliDemoRegular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("StephalliDemoRegular"),
+    url("./StephalliDemoRegular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SCRIPTIN";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SCRIPTIN"), url("./SCRIPTIN.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Dirty Headline";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Dirty Headline"), url("./Dirty Headline.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PinyonScript";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PinyonScript"), url("./PinyonScript.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ALBA";
+  font-style: normal;
+  font-weight: normal;
+  src: local("ALBA"), url("./ALBA.TTF") format("truetype");
+}
+@font-face {
+  font-family: "the unseen";
+  font-style: normal;
+  font-weight: normal;
+  src: local("the unseen"), url("./the unseen.ttf") format("truetype");
+}
+@font-face {
+  font-family: "The Frankline";
+  font-style: normal;
+  font-weight: normal;
+  src: local("The Frankline"), url("./The Frankline.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Subtle Curves Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Subtle Curves Italic"),
+    url("./Subtle Curves Italic.ttf") format("truetype");
+}

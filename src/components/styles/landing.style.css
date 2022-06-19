@@ -1,0 +1,487 @@
+.landing {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  transition: all 0.5s;
+  top: 0;
+  z-index: -1;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  background-image: radial-gradient(
+      white,
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 40px
+    ),
+    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px),
+    radial-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 30px
+    );
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  height: 100vh;
+}
+
+.firstpage {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: white;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.firstpage .meImage {
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.firstpage .titleName {
+  margin-top: 20px;
+  font-size: 2.5rem;
+  color: rgba(236, 236, 236, 0.726);
+  font-family: Subtle Curves Italic;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.firstpage .titleTarget {
+  margin: 0px;
+  font-size: 1.5rem;
+  font-family: the unseen;
+  text-transform: uppercase;
+  color: gold;
+  font-weight: bold;
+}
+.firstpage .titleDesc {
+  margin: 0px;
+  font-size: 1rem;
+  width: 60%;
+  font-family: sans-serif;
+  color: cornsilk;
+  font-weight: bold;
+}
+
+.secondpage {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 350vh;
+  background-color: #fee;
+}
+
+.secondpage .seleft {
+  width: 40%;
+  height: 100%;
+}
+.secondpage .seright {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin-right: -10%;
+  height: 100%;
+  clip-path: polygon(24% 0, 100% 0, 100% 100%, 0 100%);
+
+  background-color: green;
+}
+.secondpage .seright .normal {
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.secondpage .seright .normal img {
+  position: absolute;
+  margin-left: -7rem;
+  margin-top: -2rem;
+}
+.secondpage .seright .normal h1 {
+  margin-top: 6rem;
+}
+
+.secondpage .seleft :first-child {
+  color: #222222;
+  font-size: 8rem;
+  margin-left: -15rem;
+  margin-top: 5rem;
+  font-family: "StephalliDemoRegular";
+  text-shadow: 5px 0px 10px #8b8a8a, 15px 0px 50px #8d8d8d;
+}
+.secondpage .seleft .react-text,
+.node-text {
+  color: #00ccff;
+  margin-top: -3rem;
+  margin-left: 10rem;
+  font-size: 5rem;
+  font-family: StephalliDemoRegular;
+  text-shadow: 5px 0px 10px #222222, 15px 0px 50px #222222;
+}
+.node-text {
+  margin-left: -20rem;
+  color: green;
+  font-size: 7rem;
+}
+
+/* my portfolio  */
+.about {
+  margin-top: 100vh;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  z-index: 7;
+  display: flex;
+  flex-wrap: wrap;
+  background-size: cover;
+  background-attachment: fixed;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about .aboutleft .name {
+  font-family: "Dirty Headline";
+  font-size: 4rem;
+}
+
+.box {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.first {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../../image/background.png");
+  display: flex;
+  flex-wrap: wrap;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  background-size: cover;
+}
+.second {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  background-image: url("../../image/background.png");
+  flex-direction: column;
+  margin-top: -100vh;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  justify-content: flex-start;
+  align-items: flex-end;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.box h4 {
+  font-family: The Frankline;
+  font-size: 4.5rem;
+  color: #fff;
+  text-shadow: 0px 0px 10px #000;
+}
+
+.box .first h1 {
+  width: 40%;
+  text-align: right;
+}
+.box h1 {
+  font-family: The Frankline;
+  font-size: 8rem;
+  color: aqua;
+  text-shadow: 0px 0px 10px #000;
+  margin: 0px;
+}
+.box .second h1 {
+  text-align: left;
+  width: 40%;
+}
+.box .second h4 {
+  margin-right: 3rem;
+  text-align: right;
+}
+.box .first h4 {
+  margin-left: 3rem;
+  text-align: right;
+}
+.about .aboutleft .description {
+  font-family: "SCRIPTIN";
+  font-size: 2rem;
+}
+.about .aboutleft .details {
+  font-family: "PinyonScript";
+  font-size: 2rem;
+}
+.about .aboutright {
+  height: 100%;
+  width: 300%;
+  border: 1px solid #000;
+  border-radius: 50% 0% 0% 50%;
+
+  background-color: green;
+}
+
+/* ndoetree style starts from here */
+.nodeTree {
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-attachment: fixed;
+}
+
+.nodeTree .nodeleft:first-child {
+  margin: 0px;
+  font-size: 2rem;
+  font-family: "ALBA";
+}
+.nodeTree .nodeleft .details {
+  font-size: 2rem;
+  width: 50%;
+  font-family: "the unseen";
+}
+.nodeTree .noderight {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.nodeTree .noderight .nodeBox img {
+  -webkit-filter: drop-shadow(5px 3px 7px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(6px 6px 2px rgba(12, 209, 22, 0.7));
+  border: 3px solid grey;
+  padding: 30px;
+}
+
+.nodeTree .noderight .nodeImage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  width: 150%;
+}
+.nodeTree .noderight .nodeImage div {
+  position: relative;
+  z-index: 6;
+  background: white;
+}
+.nodeTree .noderight .nodeImage:after {
+  content: "";
+  height: 250px;
+  z-index: 5;
+  margin-top: 85px;
+  margin-left: -330px;
+  width: 150px;
+  border-top: 8px solid grey;
+  border-left: 8px solid grey;
+  position: absolute;
+  padding: 5px;
+}
+.nodeTree .noderight .nodeImage:before {
+  content: "";
+  height: 250px;
+  z-index: 5;
+  margin-top: 85px;
+  margin-left: 370px;
+  width: 150px;
+  border-top: 8px solid grey;
+  border-right: 8px solid grey;
+  position: absolute;
+  padding: 5px;
+}
+.nodeTree .noderight .ball-container {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  transition: all 2s;
+  bottom: 0;
+  right: 10vw;
+  z-index: 6;
+  /* justify-content: space-between; */
+  margin-top: 90px;
+  /* width: 50%; */
+}
+.nodeTree .noderight .ball-container .ball-body {
+  -webkit-filter: drop-shadow(5px 3px 10px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(6px 6px 2px rgba(12, 209, 22, 0.7));
+  height: 200px;
+  /* width: 250px; */
+  /* border: 3px solid grey; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  transition: all 2s;
+  justify-content: center;
+}
+
+.react-ball,
+.react-native-ball {
+  transition: all 1s;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  cursor: grab;
+  height: 150px;
+  width: 150px;
+  padding: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-wrap: wrap;
+  background-color: #222222;
+  border-radius: 50%;
+  color: #00ccff;
+  display: flex;
+  flex-wrap: wrap;
+  text-shadow: 0px 0px 3px #8b9092, 0px 0px 2px #c8ebf5;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 3px #fff, inset 0px 0px 10px #fff,
+    inset 0px 0px 5px #51b3ce, inset 0px 0px 7px #51b3ce,
+    inset 0px 0px 9px #51b3ce;
+}
+
+.react-native-ball {
+  position: relative;
+  z-index: 6;
+}
+.react-ball {
+  position: relative;
+  z-index: 5;
+  transition: 0.3s;
+}
+.nodeTree .noderight .ball-container .firstBall {
+  animation-name: reactBall;
+  animation-duration: 6s;
+}
+.nodeTree .noderight .ball-container .secondBall {
+  animation-name: nativeBall;
+  animation-duration: 5s;
+}
+.nodeTree .noderight .ball-container .react-native-ball {
+  margin-left: -3rem;
+}
+
+@keyframes remove {
+  0% {
+    height: 120px;
+    width: 120px;
+  }
+  100% {
+    height: 0px;
+    width: 0px;
+  }
+}
+@keyframes nativeBall {
+  0% {
+    margin-right: 90vw;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+@keyframes reactBall {
+  0% {
+    margin-right: 90vw;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+
+@keyframes Placing {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* portfolio style starts here */
+.portfolio-container {
+  height: 300vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: grey;
+  flex-direction: column;
+}
+.portfolio-container .Pfirstpage {
+  position: fixed;
+  top: 0;
+  left: 50;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.portfolio-sub {
+  width: 50%;
+}
+.portfolio-sub p {
+  transform: translate3d(0, 0, 0);
+}
+
+@media screen and (max-width: 769px) {
+  .box h1 {
+    font-size: 5rem;
+  }
+  .box h4 {
+    font-size: 3rem;
+  }
+  .box .first h1 {
+    width: 55%;
+  }
+  .box .second h1 {
+    width: 55%;
+  }
+  .secondPageleft {
+    display: none;
+  }
+  .secondpage .seright {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    clip-path: none;
+    background: #fff;
+  }
+  .normal {
+    clip-path: none !important;
+    position: absolute;
+    left: 0;
+    margin-left: 0px !important;
+    width: 100vw !important;
+  }
+  .titleName {
+    font-size: 1.3rem !important;
+  }
+}

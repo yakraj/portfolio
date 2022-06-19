@@ -1,0 +1,57 @@
+.MyaboutleftSide {
+  display: flex;
+  font-family: StephalliDemoRegular;
+  width: 100%;
+  transition: all 2s;
+  height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: center;
+}
+.AboutContainer {
+  position: relative;
+  z-index: 15;
+  background-size: cover;
+  background-position: center;
+}
+.MyaboutleftSide h1 {
+  font-size: 3.5em;
+  margin: 0px;
+  font-family: Dirty Headline;
+}
+
+.MyaboutleftSide h2 {
+  font-size: 2rem;
+}
+
+.MyaboutleftSide h3 {
+  font-size: 1.7em;
+  font-family: PinyonScript;
+}
+.MyaboutleftSide p {
+  font-family: Subtle Curves Italic;
+  transition: all 0.3s;
+  margin: 5px;
+  font-size: 1.2rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.MyaboutleftSide p img {
+  margin-right: 10px;
+}
+@media screen and (max-width: 769px) {
+  .MyaboutleftSide h1 {
+    font-size: 2.5em;
+  }
+  .MyaboutleftSide h2 {
+    font-size: 1.3rem;
+  }
+  .MyaboutleftSide h3 {
+    font-size: 1.1em;
+  }
+  .MyaboutleftSide p {
+    font-size: 0.9em;
+  }
+}

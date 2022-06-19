@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
 }
@@ -24,6 +28,9 @@
   color: white;
 }
 
+#contact {
+  background-color: black;
+}
 .App-link {
   color: #61dafb;
 }

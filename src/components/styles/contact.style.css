@@ -1,0 +1,94 @@
+.contact-page {
+  position: relative;
+  z-index: 50;
+  background: rgb(71, 96, 107);
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-bottom: 4rem;
+  padding-top: 2rem;
+}
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.contact-container .contact-right {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-container .contact-right textarea::placeholder {
+  color: rgb(206, 205, 205);
+  font-weight: bold;
+}
+.contact-container .contact-right textarea {
+  background: rgba(255, 252, 252, 0.082);
+  color: white;
+  outline: none;
+  padding: 15px;
+  border: none;
+  font-size: 1.2rem;
+}
+.contact-container .contact-right input::placeholder {
+  color: rgb(206, 205, 205);
+
+  font-weight: bold;
+}
+.contact-container .contact-me-text {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  border-bottom: 1px solid grey;
+  color: aqua;
+}
+.contact-container .contact-right input {
+  color: rgb(206, 205, 205);
+
+  width: 100%;
+  margin-top: 15px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid aqua;
+  outline: none;
+}
+.contact-container .contact-left .contact-recource {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 12rem;
+}
+.contact-container .contact-left .contact-recource a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: rgb(113 214 214);
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.contact-page a {
+  margin: 10px;
+}
+.contact-page .contact-icons {
+  height: 70px;
+}
+.contact-page .contact-icons a img {
+  transition: all 0.3s;
+}
+.contact-page .contact-icons a:hover img {
+  width: 60px;
+  transform: rotate(-25deg);
+}
+
+@media screen and (max-width: 769px) {
+  .contact-container .contact-right textarea {
+    width: 75%;
+  }
+  .contact-container .contact-right input {
+    width: 75%;
+  }
+}
