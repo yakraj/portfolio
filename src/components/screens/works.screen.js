@@ -318,7 +318,7 @@ export const MyWorks = ({ WindowWidth, height }) => {
             style={{ opacity: FirstImgOp, transition: "all 0.3s" }}
             width="45%"
             alt="Mobile Device"
-            src={require("../../image/mobile.png").default}
+            src={require("../../image/mobile.png")}
           />
         </div>
       </div>
@@ -345,7 +345,7 @@ export const MyWorks = ({ WindowWidth, height }) => {
           <img
             width="70%"
             alt="Data-entry-web"
-            src={require("../../image/data-entry.png").default}
+            src={require("../../image/data-entry.png")}
           />
         </div>
       </div>

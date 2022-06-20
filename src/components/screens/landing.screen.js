@@ -163,7 +163,7 @@ export const Landing = () => {
                 ref={DevImage}
                 width="250"
                 alt="react"
-                src={require("../../image/web.png").default}
+                src={require("../../image/web.png")}
               />
               <h1>Web Development</h1>
               <p>A professional way to share your business on internet.</p>
@@ -177,7 +177,7 @@ export const Landing = () => {
                 ref={cotedReact}
                 width="170"
                 alt="react"
-                src={require("../../image/app.png").default}
+                src={require("../../image/app.png")}
               />
               <h1>Android & IOS Apps</h1>
               <p>Most used devices in the world.</p>

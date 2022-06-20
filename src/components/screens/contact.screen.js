@@ -35,14 +35,14 @@ export const ContactMe = () => {
           <img
             width="50px"
             alt="youtube"
-            src={require("../../image/youtube-icon.png").default}
+            src={require("../../image/youtube-icon.png")}
           />
         </a>
         <a href="https://github.com/yakraj" target="_blank">
           <img
             width="50px"
             alt="youtube"
-            src={require("../../image/github-icon.png").default}
+            src={require("../../image/github-icon.png")}
           />
         </a>
         <a
@@ -52,7 +52,7 @@ export const ContactMe = () => {
           <img
             width="42px"
             alt="youtube"
-            src={require("../../image/linkedin-icon.png").default}
+            src={require("../../image/linkedin-icon.png")}
           />
         </a>
       </div>

@@ -102,17 +102,13 @@ export const AboutPageSet = ({
         <h2>A passinate web and App Developer from India</h2>
         <h3>A Creative developer with latest Languages & Features</h3>
         <p style={{ height: firstLang, opacity: firstOpacity }}>
-          <img
-            width="30"
-            src={require("../../image/jsicon.png").default}
-            alt="react"
-          />
+          <img width="30" src={require("../../image/jsicon.png")} alt="react" />
           JavaScript
         </p>
         <p style={{ height: secondLang, opacity: secondOpacity }}>
           <img
             width="30"
-            src={require("../../image/htmlicon.png").default}
+            src={require("../../image/htmlicon.png")}
             alt="react"
           />
           HTML
@@ -120,7 +116,7 @@ export const AboutPageSet = ({
         <p style={{ height: thirdLang, opacity: thirdOpacity }}>
           <img
             width="30"
-            src={require("../../image/cssicon.png").default}
+            src={require("../../image/cssicon.png")}
             alt="react"
           />
           CSS
@@ -128,7 +124,7 @@ export const AboutPageSet = ({
         <p style={{ height: fourthLang, opacity: fourthOpacity }}>
           <img
             width="30"
-            src={require("../../image/nodeicon.png").default}
+            src={require("../../image/nodeicon.png")}
             alt="react"
           />
           Node
@@ -136,7 +132,7 @@ export const AboutPageSet = ({
         <p style={{ height: fourthLang, opacity: fourthOpacity }}>
           <img
             width="30"
-            src={require("../../image/databaseicon.png").default}
+            src={require("../../image/databaseicon.png")}
             alt="react"
           />
           SQL
@@ -144,7 +140,7 @@ export const AboutPageSet = ({
         <p style={{ height: fifthLang, opacity: fifthOpacity }}>
           <img
             width="30"
-            src={require("../../image/reacticon.png").default}
+            src={require("../../image/reacticon.png")}
             alt="react"
           />
           React
@@ -152,7 +148,7 @@ export const AboutPageSet = ({
         <p style={{ height: sixthLang, opacity: sixthOpacity }}>
           <img
             width="30"
-            src={require("../../image/reacticon.png").default}
+            src={require("../../image/reacticon.png")}
             alt="react"
           />
           React Native
@@ -167,7 +163,7 @@ export const AboutPageSet = ({
           justifyContent: "center",
         }}
       >
-        <img width="50%" src={require("../../image/languages.png").default} />
+        <img width="50%" src={require("../../image/languages.png")} />
       </div>
     </div>
   );
