@@ -7,6 +7,27 @@ import { MyWorks } from "./works.screen";
 import { Navigation } from "./navigation.screen";
 import { ContactMe } from "./contact.screen";
 export const Landing = () => {
+  const CursorFollower = useRef();
+  const cursor = useRef();
+
+  const [cursorTop, oncursorTop] = useState();
+  const [cursorLeft, oncursorLeft] = useState();
+  const [clicked, onclicked] = useState(false);
+  // useEffect(() => {
+  //   window.addEventListener("mousemove", (e) => {
+  //     oncursorTop(e.pageY - 10);
+  //     oncursorLeft(e.pageX - 10);
+  //   });
+
+  //   window.addEventListener("click", (e) => {
+  //     onclicked(true);
+
+  //     setTimeout(() => {
+  //       onclicked(false);
+  //     }, 500);
+  //   });
+  // });
+
   const TopSite = window.visualViewport.pageTop;
   const WindowWidth = window.visualViewport.width;
   const height = window.innerHeight;
@@ -85,6 +106,13 @@ export const Landing = () => {
   return (
     <div style={{ scrollBehaviour: "smooth" }}>
       <Navigation width={WindowWidth} />
+      {/* this is specially for cursor */}
+
+      <div style={{ top: cursorTop, left: cursorLeft }} id="cursor-ball">
+        <div class={clicked ? "clickball" : "firstpoll"}></div>
+        <div id="secondpoll"></div>
+      </div>
+      {/* cursor code ends */}
       <div
         style={{
           marginTop: `-${InHeight - ScrollPar}px`,
@@ -283,8 +311,12 @@ export const Landing = () => {
           </div>
         </div>
         {/* right side */}
-        <div>
-          <img alt="mobile" src={require("../../image/mobile.png")} />
+        <div className="right-side-image">
+          <img
+            width="80%"
+            alt="mobile"
+            src={require("../../image/mobile.png")}
+          />
           <div className="button">Play</div>
         </div>
       </div>

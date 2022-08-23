@@ -56,7 +56,7 @@ export const ContactMe = () => {
           />
         </a>
       </div>
-      <div className="contact-container">
+      {/* <div className="contact-container"> 
         <div className="contact-left">
           <h3 className="contact-me-text">Contact me</h3>
           <div className="contact-recource">
@@ -102,7 +102,7 @@ export const ContactMe = () => {
             Send
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

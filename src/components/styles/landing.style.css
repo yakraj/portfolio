@@ -1,3 +1,109 @@
+/* * {
+  cursor: none;
+} */
+#parent {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+#cursor-ball {
+  z-index: 99999;
+  height: 40px;
+  width: 40px;
+  left: 200px;
+  position: absolute;
+  opacity: 1;
+  filter: blur(0.5px);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+.firstpoll {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid yellow;
+  animation-name: firstexample;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+#secondpoll {
+  position: absolute;
+  border-radius: 50%;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+.clickball {
+  position: absolute;
+  border-radius: 50%;
+  animation-name: exampleclick;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes firstexample {
+  0% {
+    border: 0px solid pink;
+    width: 0%;
+    height: 0%;
+  }
+
+  50% {
+    border: 5px solid orange;
+    width: 0%;
+    height: 0%;
+  }
+  100% {
+    border: 0px solid blue;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes exampleclick {
+  0% {
+    border: 0px solid red;
+    width: 0%;
+    height: 0%;
+  }
+
+  50% {
+    border: 15px solid red;
+    width: 50%;
+    height: 50%;
+  }
+  100% {
+    border: 0px solid red;
+    width: 200%;
+    height: 200%;
+  }
+}
+@keyframes example {
+  0% {
+    border: 5px solid green;
+    width: 0%;
+    height: 0%;
+  }
+  100% {
+    border: 0px solid green;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#scroll {
+  background: pink;
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 200vh;
+}
 .landing {
   display: flex;
   flex-wrap: wrap;
@@ -488,11 +594,44 @@
   .titleName {
     font-size: 1.3rem !important;
   }
+
+  /* these are media for works */
+
+  .mywork-details-container {
+    width: 100% !important;
+  }
+
+  .mywork-title-container h1 {
+    font-size: 2rem !important;
+    text-shadow: 1px 1px #777777, 2px 2px rgba(255, 99, 71, 0.548) !important;
+  }
+  .mywork-title-container h3 {
+    font-size: 1.5rem !important;
+  }
+
+  .mywork-description {
+    padding: 0 !important;
+  }
+  .mywork-description p {
+  }
+  .mywork-features-container {
+  }
+  .mywork-features {
+  }
+  .mywork-features img {
+  }
+  .mywork-features p {
+  }
+  .right-side-image {
+  }
+  .right-side-image {
+  }
 }
 
 /* landing new mobile apps and ads my work css */
 
 .mywork-container {
+  height: 100vh;
   background: #fff;
   display: flex;
   flex-wrap: wrap;
@@ -514,6 +653,21 @@
   flex-direction: column;
   /* flex-direction: row; */
 }
+.mywork-title-container h3 {
+  margin: 0;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  font-family: The Frankline;
+}
+.mywork-title-container h1 {
+  margin-bottom: 0;
+  font-size: 4rem;
+  font-family: StephalliDemoRegular;
+  font-family: StephalliDemoRegular;
+  text-shadow: 1px 1px #777777, 2px 2px rgba(255, 99, 71, 0.548),
+    3px 3px #fe490288, 4px 4px #fe490275, 5px 5px #fe4902, 6px 6px #fe4902;
+  transform: rotateX(-5deg) rotateY(-5deg);
+}
 .mywork-description-container {
   display: flex;
   justify-content: center;
@@ -521,18 +675,18 @@
   flex-wrap: wrap;
 }
 .mywork-description {
-  width: 50%;
+  width: 40%;
   min-width: 300px;
   padding: 20px;
   box-sizing: border-box;
   min-width: 300px;
 }
 .mywork-description p {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: the unseen;
   font-size: 1.5rem;
 }
 .mywork-features-container {
-  width: 50%;
+  width: 40%;
   justify-content: center;
   align-items: center;
 }
@@ -547,4 +701,15 @@
 .mywork-features p {
   margin: 0;
   text-align: left;
+  margin-bottom: 10px;
+}
+.right-side-image {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.right-side-image div {
+  position: absolute;
 }
