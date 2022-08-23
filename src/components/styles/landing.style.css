@@ -171,6 +171,8 @@
   align-items: flex-start;
   flex-direction: column;
   background-size: cover;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
 }
 .second {
   height: 100vh;
@@ -185,6 +187,8 @@
   align-items: flex-end;
   background-size: cover;
   background-blend-mode: overlay;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
 }
 
 .box h4 {
@@ -484,4 +488,21 @@
   .titleName {
     font-size: 1.3rem !important;
   }
+}
+
+/* landing new mobile apps and ads my work css */
+
+.mywork-container {
+}
+.mywork-details-container {
+}
+.mywork-title-container {
+}
+.mywork-description-container {
+}
+.mywork-description {
+}
+.mywork-features-container {
+}
+.mywork-features {
 }
