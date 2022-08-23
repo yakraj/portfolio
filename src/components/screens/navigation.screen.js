@@ -6,11 +6,12 @@ export const Navigation = ({ width }) => {
       <div style={{ width: Width }} className="navButton">
         <a onClick={click} href={href} className="innnerNav">
           <img
+            style={{ marginTop: "10px" }}
             className="navImage"
             alt="home"
-            src={require(`../../image/${image}.svg`).default}
-            height="35px"
-            width="35px"
+            src={require(`../../image/${image}.svg`)}
+            height="30px"
+            width="30px"
           />
           <h3>{children}</h3>
         </a>

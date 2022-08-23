@@ -90,7 +90,7 @@ export const MyWorks = ({ WindowWidth, height }) => {
               setImgeToggle(false);
             }}
             width="30px"
-            src={require("../../image/close.svg").default}
+            src={require("../../image/close.svg")}
             alt="close"
           />
         </div>

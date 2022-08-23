@@ -74,6 +74,14 @@ export const Landing = () => {
     });
   }, [setDeviTop]);
 
+  const workfeatures = [
+    { id: 1, keyword: "privacy first" },
+    { id: 2, keyword: "IOS/Android supported" },
+    { id: 1, keyword: "Search restaurants and it's details" },
+    { id: 1, keyword: "Live Geo-Location" },
+    { id: 1, keyword: "make favourites" },
+    { id: 1, keyword: "Secure payments Method" },
+  ];
   return (
     <div style={{ scrollBehaviour: "smooth" }}>
       <Navigation width={WindowWidth} />
@@ -115,7 +123,7 @@ export const Landing = () => {
             style={{
               marginLeft: marginTrangle * 2,
             }}
-            className={mobileAnim}
+            // className={mobileAnim}
             className="first mobileparFirst"
           >
             <h1>Yakraj</h1>
@@ -185,8 +193,102 @@ export const Landing = () => {
           </div>
         </div>
       </div>
-      {/* ndoe tree starts at here  */}
+      {/* this is example of my words */}
+      <div className="mywork-container">
+        {/* left side */}
+        <div className="mywork-details-container">
+          {/* top title and keyword */}
+          <div className="mywork-title-container">
+            <h1>Restaurant App</h1>
+            <h3>Android/IOS App</h3>
+          </div>
+          {/* this is for description and key works */}
+          <div className="mywork-description-container">
+            {/* this is little description of my work */}
+            <div className="mywork-description">
+              <p>
+                A brilliant and user-friendly mobile app for Restaurant and
+                Hotels. Which contains live-location service and gives customer
+                better experience.
+              </p>
+            </div>
+            {/* this is for working keys */}
+            <div className="mywork-features-container">
+              <div className="mywork-features">
+                {/* these are items for working keys */}
 
+                <img
+                  width="20px"
+                  alt="sitepoint"
+                  src={require("../../image/sitepoint.svg").default}
+                />
+                <p>privacy first</p>
+              </div>
+              <div className="mywork-features">
+                {/* these are items for working keys */}
+
+                <img
+                  width="20px"
+                  alt="sitepoint"
+                  src={require("../../image/sitepoint.svg").default}
+                />
+                <p>IOS/Android supported</p>
+              </div>
+              <div className="mywork-features">
+                {/* these are items for working keys */}
+
+                <img
+                  width="20px"
+                  alt="sitepoint"
+                  src={require("../../image/sitepoint.svg").default}
+                />
+                <p>
+                  Search restaurants and it's details Search restaurants and
+                  it's details Search restaurants and it's detailsSearch
+                  restaurants and it's detailsSearch restaurants and it's
+                  details
+                </p>
+              </div>
+              <div className="mywork-features">
+                {/* these are items for working keys */}
+
+                <img
+                  width="20px"
+                  alt="sitepoint"
+                  src={require("../../image/sitepoint.svg").default}
+                />
+                <p>Live Geo-Location</p>
+              </div>
+              <div className="mywork-features">
+                {/* these are items for working keys */}
+
+                <img
+                  width="20px"
+                  alt="sitepoint"
+                  src={require("../../image/sitepoint.svg").default}
+                />
+                <p>make favourites</p>
+              </div>
+              <div className="mywork-features">
+                {/* these are items for working keys */}
+
+                <img
+                  width="20px"
+                  alt="sitepoint"
+                  src={require("../../image/sitepoint.svg").default}
+                />
+                <p>Secure payments Method</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* right side */}
+        <div>
+          <img alt="mobile" src={require("../../image/mobile.png")} />
+          <div className="button">Play</div>
+        </div>
+      </div>
+      {/* ndoe tree starts at here  */}
       {/* portfolio tree starts from here */}
       <MyWorks WindowWidth={WindowWidth} height={height} />
       <ContactMe />

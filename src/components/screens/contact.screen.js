@@ -65,7 +65,7 @@ export const ContactMe = () => {
                 alt="email"
                 width="30"
                 style={{ marginRight: 15 }}
-                src={require("../../image/email.svg").default}
+                src={require("../../image/email.svg")}
               />
               Princeyakraj289@gmail.com
             </a>
