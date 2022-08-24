@@ -245,7 +245,7 @@ export const MyWorks = ({ WindowWidth, height }) => {
           zIndex: PortZInd,
         }}
       >
-        <div style={{ opacity: FirstOpacity }} className="leftSide">
+        {/* <div style={{ opacity: FirstOpacity }} className="leftSide"> 
           <div
             className="rotatingContainer"
             style={{
@@ -312,7 +312,7 @@ export const MyWorks = ({ WindowWidth, height }) => {
               <h3>Secure Payments Method</h3>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="RightSide">
           <img
             style={{ opacity: FirstImgOp, transition: "all 0.3s" }}

@@ -270,12 +270,7 @@ export const Landing = () => {
                   alt="sitepoint"
                   src={require("../../image/sitepoint.svg").default}
                 />
-                <p>
-                  Search restaurants and it's details Search restaurants and
-                  it's details Search restaurants and it's detailsSearch
-                  restaurants and it's detailsSearch restaurants and it's
-                  details
-                </p>
+                <p>Search restaurants and it's details</p>
               </div>
               <div className="mywork-features">
                 {/* these are items for working keys */}
