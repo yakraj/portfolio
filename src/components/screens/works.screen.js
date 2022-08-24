@@ -22,7 +22,6 @@ const CrdView = ({ title, img, desc, redirect }) => {
 export const MyWorks = ({ WindowWidth, height }) => {
   var [ImageToggle, setImgeToggle] = useState(false);
 
-  const portFirst = useRef();
   var [PortVal, setPortVal] = useState();
   var [PortZInd, setPortZInd] = useState(-50);
   var [FirstOpacity, setFirstOpacity] = useState(0);
@@ -35,43 +34,7 @@ export const MyWorks = ({ WindowWidth, height }) => {
   var [FirstImgOp, setFirstImageOp] = useState();
   var [SecondZindex, setSecondZindex] = useState();
   var [RestaurantAppOp, setRestaurantAppOp] = useState(0);
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      const portfolioScroller = portFirst.current.getBoundingClientRect().top;
-      setPortVal(portfolioScroller);
-      if (portfolioScroller < height) {
-        setPortZInd(-1);
-      } else {
-        setPortZInd(-50);
-      }
-      if (portfolioScroller < 0) {
-        setPortZInd(1);
-      }
-      if (portfolioScroller < -330) {
-        setRestaurantAppOp(1);
-      } else {
-        setRestaurantAppOp(0);
-      }
 
-      if (portfolioScroller < height * 2) {
-        setFirstOpacity((height / 10 - portfolioScroller) * 0.002);
-      }
-      if (portfolioScroller < -1294) {
-        setFirstOpacity((portfolioScroller + 2000) * 0.0033);
-      }
-      if (portfolioScroller < -2100) {
-        setFirstImageOp(0);
-        setSeondOp((portfolioScroller + 2100) * 0.002);
-        setSecondZindex(10);
-      } else {
-        setFirstImageOp(1);
-      }
-      if (portfolioScroller > -2100) {
-        setSeondOp(0);
-        setSecondZindex(-1);
-      }
-    });
-  }, [height, setFirstOpacity]);
   // mobile imge seq statrt from here
   var topMobile = (height / 10 - PortVal) / 6.66;
 
@@ -109,11 +72,13 @@ export const MyWorks = ({ WindowWidth, height }) => {
   useEffect(() => {
     fetch("https://my-json-server.typicode.com/yakraj/webimages/images")
       .then((response) => response.json())
-      .then((json) => setGalleryImages(json));
+      .then((json) => setGalleryImages(json))
+      .catch((err) => {});
 
     fetch("https://my-json-server.typicode.com/yakraj/webimages/works")
       .then((response) => response.json())
-      .then((json) => setRecentWorks(json));
+      .then((json) => setRecentWorks(json))
+      .catch((err) => {});
   }, []);
 
   if (GalleryImages) {
@@ -144,7 +109,7 @@ export const MyWorks = ({ WindowWidth, height }) => {
           style={{
             overflow: "hidden",
             height: galleryHeight,
-            transition: "all 3s",
+            transition: "all 3s"
           }}
           className="galley-house"
         >
@@ -235,121 +200,6 @@ export const MyWorks = ({ WindowWidth, height }) => {
 
   return (
     <div>
-      <div id="portfolio"></div>
-      <div
-        className="FirstProduct"
-        style={{
-          height: "100vh",
-          display: "flex",
-          background: "linear-gradient(45deg, #fbdda7, #9efffb)",
-          zIndex: PortZInd,
-        }}
-      >
-        {/* <div style={{ opacity: FirstOpacity }} className="leftSide"> 
-          <div
-            className="rotatingContainer"
-            style={{
-              marginLeft: FirstTextMargin,
-              display: "flex",
-              alignItems: "center",
-              flexDirection: "column",
-            }}
-          >
-            <h1 className="title" style={{ "--i": 3 }}>
-              Restaurant App
-            </h1>
-            <h1 className="desc" style={{ "--i": 2 }}>
-              Android/IOS App
-            </h1>
-            <h1 className="info" style={{ "--i": 1 }}>
-              A brilliant and user-friendly mobile app for Restaurant and
-              Hotels. Which contains live-location service and gives customer
-              better experience.
-            </h1>
-            <div class="button">Visit</div>
-          </div>
-          <div
-            style={{ opacity: RestaurantAppOp, transition: "all 0.6s" }}
-            className="featuresCont"
-          >
-            <div className="features-details">
-              <img
-                alt="privacy"
-                src={require("../../image/privacy-lock.svg").default}
-              />
-              <h3>Privacy first</h3>
-            </div>
-            <div className="features-details">
-              <img alt="privacy" src={require("../../image/ios.svg").default} />
-              <h3>IOS/Android supported</h3>
-            </div>
-            <div className="features-details">
-              <img
-                alt="privacy"
-                src={require("../../image/search.svg").default}
-              />
-              <h3>Searh restaurants and it's details </h3>
-            </div>
-            <div className="features-details">
-              <img
-                alt="privacy"
-                src={require("../../image/location.svg").default}
-              />
-              <h3>Live Geo-Location</h3>
-            </div>
-            <div className="features-details">
-              <img
-                alt="privacy"
-                src={require("../../image/favourite.svg").default}
-              />
-              <h3>Make favourites</h3>
-            </div>
-            <div className="features-details">
-              <img
-                alt="privacy"
-                src={require("../../image/payment.svg").default}
-              />
-              <h3>Secure Payments Method</h3>
-            </div>
-          </div>
-        </div> */}
-        <div className="RightSide">
-          <img
-            style={{ opacity: FirstImgOp, transition: "all 0.3s" }}
-            width="45%"
-            alt="Mobile Device"
-            src={require("../../image/mobile.png")}
-          />
-        </div>
-      </div>
-      <div
-        style={{
-          opacity: -SecondPageOp,
-          transition: "all 0.3s",
-          zIndex: SecondZindex,
-        }}
-        className="secondProduct"
-      >
-        <div className="secPLeft">
-          <h1>Company Data Entry</h1>
-          <h3>Specialyzed online web for Industrials companies.</h3>
-          <p>
-            This is very special web applicaton for company level, which is
-            acccessable from anywhere with major Privacy, once you login through
-            your own crediantials you willl be allowed to see and make changes
-            on app.
-          </p>
-          <div class="button">Visit</div>
-        </div>
-        <div className="secPRight">
-          <img
-            width="70%"
-            alt="Data-entry-web"
-            src={require("../../image/data-entry.png")}
-          />
-        </div>
-      </div>
-      <div ref={portFirst} style={{ height: "500vh" }}></div>
       <div className="recent-works">
         <h3 style={{ textAligh: "center", width: "100%" }}>Recent Works</h3>
 
@@ -358,7 +208,7 @@ export const MyWorks = ({ WindowWidth, height }) => {
           style={{
             display: "flex",
             flexWrap: "wrap",
-            justifyContent: "space-around",
+            justifyContent: "space-around"
           }}
         >
           {RecentWorks ? (
@@ -419,7 +269,7 @@ export const MyWorks = ({ WindowWidth, height }) => {
           </div>
         </div> */}
 
-        <ImageGallery />
+        {/* <ImageGallery /> */}
       </div>
       {ImageToggle && <ImageMax />}
     </div>

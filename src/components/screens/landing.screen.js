@@ -6,9 +6,70 @@ import { AboutPageSet } from "./about.screen";
 import { MyWorks } from "./works.screen";
 import { Navigation } from "./navigation.screen";
 import { ContactMe } from "./contact.screen";
+import { Portfolio } from "./portfolio";
+import { Gallery } from "./gallery";
 export const Landing = () => {
+  const [printname, onprintname] = useState("");
+
+  const [text, ontext] = useState("");
+  const [text1, ontext1] = useState("");
+  const [slogon, onslogon] = useState("");
+  useEffect(() => {
+    var innerName = "";
+    var subdis = "";
+    var slogon = "";
+    var textt = " Yakraj Pariyar";
+    var text1 = " Web & Mobile Developer";
+    var text2 =
+      " I don't say i'm very creative, but I can put my all effort to make my work easier and better than ever.";
+    for (var i = 1; i < textt.length; i++) {
+      (function (index) {
+        setTimeout(function () {
+          innerName = innerName + textt[index];
+          ontext(innerName);
+        }, i * 200);
+      })(i);
+    }
+
+    setTimeout(() => {
+      for (var i = 1; i < text1.length; i++) {
+        (function (index) {
+          setTimeout(function () {
+            subdis = subdis + text1[index];
+            ontext1(subdis);
+          }, i * 200);
+        })(i);
+      }
+    }, 3000);
+    setTimeout(() => {
+      for (var i = 1; i < text2.length; i++) {
+        (function (index) {
+          setTimeout(function () {
+            slogon = slogon + text2[index];
+            onslogon(slogon);
+          }, i * 100);
+        })(i);
+      }
+    }, 7600);
+  }, []);
+
   const CursorFollower = useRef();
   const cursor = useRef();
+
+  const [data, ondata] = useState([]);
+  const [loadingdata, onloadingdata] = useState(false);
+  useEffect(() => {
+    onloadingdata(true);
+    fetch("https://my-json-server.typicode.com/yakraj/webimages/portfolio")
+      .then((res) => res.json())
+      .then((response) => {
+        ondata(response);
+        onloadingdata(false);
+      })
+      .catch((err) => {
+        onloadingdata(false);
+      });
+  }, []);
 
   const [cursorTop, oncursorTop] = useState();
   const [cursorLeft, oncursorLeft] = useState();
@@ -78,7 +139,7 @@ export const Landing = () => {
         setMobileAnim("firstSticky");
       }
       const AboutBottom = aboutPage.current.getBoundingClientRect().bottom;
-      console.log(AboutScroll);
+
       const aboutVal = AboutBottom / 36;
       if (aboutVal < 0) {
         if (aboutVal > -10) {
@@ -125,17 +186,27 @@ export const Landing = () => {
           <img
             width="150px"
             className="meImage"
-            src={require("../../image/me.jpg").default}
+            src={require("../../image/me.jpg")}
           />
 
-          <p className="titleName">Yakraj Pariyar</p>
-          <p className="titleTarget">A passinate web and Apps developer.</p>
+          <p className="titleName">{text}</p>
+          <p className="titleTarget">{text1}</p>
           <p className="titleDesc">
-            I'm a developer from india.I love to make ideas live. I make
+            {slogon}
+            {/* I love to make ideas live. I make
             stunning, creative and dynamic websites and apps. Hope once if you
             will give me change to deploy your project I won't make you
-            disappoint.
+            disappoint. */}
           </p>
+          <button className="button">
+            Video
+            <img
+              style={{ marginLeft: "10px" }}
+              width="25px"
+              alt="play"
+              src={require("../../image/play.png")}
+            />
+          </button>
         </div>
       </div>
       <div name="portf"></div>
@@ -153,23 +224,13 @@ export const Landing = () => {
             }}
             // className={mobileAnim}
             className="first mobileparFirst"
-          >
-            <h1>Yakraj</h1>
-            <div>
-              <h4>Apps Developer</h4>
-            </div>
-          </div>
+          ></div>
           <div
             style={{
               marginLeft: -marginTrangle * 2,
             }}
             className="second mobileparSecond"
-          >
-            <div>
-              <h4>Web Developer</h4>
-            </div>
-            <h1>Pariyar</h1>
-          </div>
+          ></div>
         </div>
       </div>
 
@@ -222,101 +283,16 @@ export const Landing = () => {
         </div>
       </div>
       {/* this is example of my words */}
-      <div className="mywork-container">
-        {/* left side */}
-        <div className="mywork-details-container">
-          {/* top title and keyword */}
-          <div className="mywork-title-container">
-            <h1>Restaurant App</h1>
-            <h3>Android/IOS App</h3>
-          </div>
-          {/* this is for description and key works */}
-          <div className="mywork-description-container">
-            {/* this is little description of my work */}
-            <div className="mywork-description">
-              <p>
-                A brilliant and user-friendly mobile app for Restaurant and
-                Hotels. Which contains live-location service and gives customer
-                better experience.
-              </p>
-            </div>
-            {/* this is for working keys */}
-            <div className="mywork-features-container">
-              <div className="mywork-features">
-                {/* these are items for working keys */}
-
-                <img
-                  width="20px"
-                  alt="sitepoint"
-                  src={require("../../image/sitepoint.svg").default}
-                />
-                <p>privacy first</p>
-              </div>
-              <div className="mywork-features">
-                {/* these are items for working keys */}
-
-                <img
-                  width="20px"
-                  alt="sitepoint"
-                  src={require("../../image/sitepoint.svg").default}
-                />
-                <p>IOS/Android supported</p>
-              </div>
-              <div className="mywork-features">
-                {/* these are items for working keys */}
-
-                <img
-                  width="20px"
-                  alt="sitepoint"
-                  src={require("../../image/sitepoint.svg").default}
-                />
-                <p>Search restaurants and it's details</p>
-              </div>
-              <div className="mywork-features">
-                {/* these are items for working keys */}
-
-                <img
-                  width="20px"
-                  alt="sitepoint"
-                  src={require("../../image/sitepoint.svg").default}
-                />
-                <p>Live Geo-Location</p>
-              </div>
-              <div className="mywork-features">
-                {/* these are items for working keys */}
-
-                <img
-                  width="20px"
-                  alt="sitepoint"
-                  src={require("../../image/sitepoint.svg").default}
-                />
-                <p>make favourites</p>
-              </div>
-              <div className="mywork-features">
-                {/* these are items for working keys */}
-
-                <img
-                  width="20px"
-                  alt="sitepoint"
-                  src={require("../../image/sitepoint.svg").default}
-                />
-                <p>Secure payments Method</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* right side */}
-        <div className="right-side-image">
-          <img
-            width="80%"
-            alt="mobile"
-            src={require("../../image/mobile.png")}
-          />
-          <div className="button">Play</div>
-        </div>
+      <div className="portofolio-container" id="portfolio">
+        {data.map((x, i) => {
+          return <Portfolio x={x} i={i} />;
+        })}
       </div>
       {/* ndoe tree starts at here  */}
       {/* portfolio tree starts from here */}
+      <div style={{ background: "#fff" }}>
+        <Gallery />
+      </div>
       <MyWorks WindowWidth={WindowWidth} height={height} />
       <ContactMe />
     </div>

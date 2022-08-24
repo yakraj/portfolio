@@ -5,7 +5,7 @@ export const AboutPageSet = ({
   WindowWidth,
   height,
   TopSite,
-  marginTrangle,
+  marginTrangle
 }) => {
   var aboutOpacity = "";
   var widthVal = "100%";
@@ -81,25 +81,25 @@ export const AboutPageSet = ({
         height: "100vh",
         background: files[langSeq],
         transition: "all 0.9s",
-        width: "100vw",
+        width: "100%",
         display: marginTrangle < 0 ? "flex" : "none",
         zIndex: ZInxex,
         position: "fixed",
         flexWrap: "wrap",
 
         top: 0,
-        left: 0,
+        left: 0
       }}
     >
       <div
         style={{
           opacity: -aboutOpacity,
-          width: widthVal,
+          width: widthVal
         }}
         className="MyaboutleftSide"
       >
         <h1>Yakraj Pariyar</h1>
-        <h2>A passinate web and App Developer from India</h2>
+        <h2>A passinate web and App Developer</h2>
         <h3>A Creative developer with latest Languages & Features</h3>
         <p style={{ height: firstLang, opacity: firstOpacity }}>
           <img width="30" src={require("../../image/jsicon.png")} alt="react" />
@@ -160,7 +160,7 @@ export const AboutPageSet = ({
           zIndex: ZInxex,
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "center"
         }}
       >
         <img width="50%" src={require("../../image/languages.png")} />

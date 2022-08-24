@@ -1,6 +1,9 @@
 /* * {
   cursor: none;
 } */
+.root.jsx-1063984698 {
+  justify-content: center !important;
+}
 #parent {
   padding: 10px;
   height: 100%;
@@ -111,6 +114,7 @@
   width: 100%;
   transition: all 0.5s;
   top: 0;
+  left: 0;
   z-index: -1;
   justify-content: center;
   align-items: center;
@@ -147,10 +151,10 @@
   border-radius: 50%;
 }
 .firstpage .titleName {
-  margin-top: 20px;
-  font-size: 2.5rem;
+  margin: 10px;
+  font-size: 3rem;
   color: rgba(236, 236, 236, 0.726);
-  font-family: Subtle Curves Italic;
+  font-family: "Courier New", Courier, monospace;
   letter-spacing: 7px;
   text-transform: uppercase;
   font-weight: bold;
@@ -159,8 +163,8 @@
   margin: 0px;
   font-size: 1.5rem;
   font-family: the unseen;
-  text-transform: uppercase;
-  color: gold;
+  text-transform: capitalize;
+  color: rgba(255, 217, 0, 0.658);
   font-weight: bold;
 }
 .firstpage .titleDesc {
@@ -263,13 +267,13 @@
   position: sticky;
   top: 0;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
 }
 .first {
   height: 100vh;
-  width: 100vw;
-  background-image: url("../../image/background.png");
+  width: 100%;
+  background-image: url("../../image/intro.gif");
   display: flex;
   flex-wrap: wrap;
   clip-path: polygon(0 0, 0 100%, 100% 100%);
@@ -284,14 +288,14 @@
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  width: 100vw;
-  background-image: url("../../image/background.png");
+  width: 100%;
+  background-image: url("../../image/intro.gif");
+  background-size: cover;
   flex-direction: column;
   margin-top: -100vh;
   clip-path: polygon(0 0, 100% 0, 100% 100%);
   justify-content: flex-start;
   align-items: flex-end;
-  background-size: cover;
   background-blend-mode: overlay;
   transition-duration: 200ms;
   transition-timing-function: ease-out;
@@ -589,7 +593,7 @@
     position: absolute;
     left: 0;
     margin-left: 0px !important;
-    width: 100vw !important;
+    width: 100% !important;
   }
   .titleName {
     font-size: 1.3rem !important;
@@ -609,37 +613,32 @@
     font-size: 1.5rem !important;
   }
 
+  .right-side-image {
+    width: 100% !important;
+  }
   .mywork-description {
     padding: 0 !important;
-  }
-  .mywork-description p {
-  }
-  .mywork-features-container {
-  }
-  .mywork-features {
-  }
-  .mywork-features img {
-  }
-  .mywork-features p {
-  }
-  .right-side-image {
-  }
-  .right-side-image {
   }
 }
 
 /* landing new mobile apps and ads my work css */
-
+.portofolio-container {
+  background-image: url("../../image/animation.gif");
+  background-size: cover;
+  /* background: linear-gradient(45deg, rgb(251, 221, 167), rgb(158, 255, 251)); */
+  background-attachment: fixed;
+}
 .mywork-container {
-  height: 100vh;
-  background: #fff;
+  padding: 20px;
+  /* min-height: 100vh; */
+  background: transparent;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 .mywork-details-container {
-  width: 70%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -675,13 +674,13 @@
   flex-wrap: wrap;
 }
 .mywork-description {
+  padding: 10px;
   width: 40%;
-  min-width: 300px;
-  padding: 20px;
   box-sizing: border-box;
   min-width: 300px;
 }
 .mywork-description p {
+  color: grey;
   font-family: the unseen;
   font-size: 1.5rem;
 }
@@ -692,6 +691,7 @@
 }
 .mywork-features {
   display: flex;
+  padding: 10px;
   align-items: flex-start;
   justify-content: flex-start;
 }
@@ -700,10 +700,13 @@
 }
 .mywork-features p {
   margin: 0;
+  font-weight: bold;
+  color: grey;
   text-align: left;
   margin-bottom: 10px;
 }
 .right-side-image {
+  width: 40%;
   box-sizing: border-box;
   display: flex;
   justify-content: center;

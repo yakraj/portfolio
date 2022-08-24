@@ -14,11 +14,11 @@ export const ContactMe = () => {
         name: firstName,
         email: email,
         message: message,
-        id: 1,
+        id: 1
       }),
       headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
+        "Content-type": "application/json; charset=UTF-8"
+      }
     })
       .then((response) => response.json())
       .then((json) => console.log(json));

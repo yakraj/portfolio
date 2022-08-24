@@ -8,7 +8,7 @@ export const Navigation = ({ width }) => {
           <img
             style={{ marginTop: "10px" }}
             className="navImage"
-            alt="home"
+            alt={children}
             src={require(`../../image/${image}.svg`)}
             height="30px"
             width="30px"
