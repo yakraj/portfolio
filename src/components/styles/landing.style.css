@@ -1,6 +1,18 @@
 /* * {
   cursor: none;
 } */
+
+.video-close {
+  position: absolute;
+  right: 10px;
+  /* cursor: pointer; */
+  top: 30px;
+}
+.video-popup {
+  position: absolute;
+  top: 0;
+  z-index: 9999;
+}
 .root.jsx-1063984698 {
   justify-content: center !important;
 }

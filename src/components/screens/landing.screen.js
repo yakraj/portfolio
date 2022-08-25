@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import "../styles/fonts.style.css";
 import "../styles/landing.style.css";
-
+import { ReactComponent as Logo } from "../../image/close.svg";
 import { AboutPageSet } from "./about.screen";
 import { MyWorks } from "./works.screen";
 import { Navigation } from "./navigation.screen";
@@ -9,8 +9,6 @@ import { ContactMe } from "./contact.screen";
 import { Portfolio } from "./portfolio";
 import { Gallery } from "./gallery";
 export const Landing = () => {
-  const [printname, onprintname] = useState("");
-
   const [text, ontext] = useState("");
   const [text1, ontext1] = useState("");
   const [slogon, onslogon] = useState("");
@@ -107,7 +105,7 @@ export const Landing = () => {
   const [DeviTop, setDeviTop] = useState();
 
   var BrandingVisibility = 1;
-
+  const youtubevid = useRef();
   // variable for node section
 
   const changeColor = () => {
@@ -155,18 +153,46 @@ export const Landing = () => {
       setDeviTop(DevImage.current.getBoundingClientRect().top);
     });
   }, [setDeviTop]);
+  const videoPlayer = useRef();
+  const [playvideo, onplayvideo] = useState(false);
+  const CloseVideo = () => {
+    // console.log("close video youtubevid");
+    onplayvideo(false);
+    youtubevid.current.contentWindow.postMessage(
+      '{"event":"command","func":"pauseVideo","args":""}',
+      "*"
+    );
+  };
 
-  const workfeatures = [
-    { id: 1, keyword: "privacy first" },
-    { id: 2, keyword: "IOS/Android supported" },
-    { id: 1, keyword: "Search restaurants and it's details" },
-    { id: 1, keyword: "Live Geo-Location" },
-    { id: 1, keyword: "make favourites" },
-    { id: 1, keyword: "Secure payments Method" },
-  ];
   return (
     <div style={{ scrollBehaviour: "smooth" }}>
       <Navigation width={WindowWidth} />
+
+      {/* this is for vide popup */}
+      <div
+        style={{ display: playvideo ? "block" : "none" }}
+        class="video-popup"
+      >
+        <Logo
+          className="video-close"
+          onClick={() => {
+            CloseVideo();
+          }}
+          fill="red"
+          width="50px"
+          height="50px"
+        />
+        <iframe
+          ref={youtubevid}
+          width={WindowWidth}
+          height={height}
+          src="https://www.youtube.com/embed/a05sAVg6L4o?enablejsapi=1&rel=0&smodestbranding=1"
+          title="Yakraj Pariyar"
+          frameborder="0"
+          // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
       {/* this is specially for cursor */}
 
       <div style={{ top: cursorTop, left: cursorLeft }} id="cursor-ball">
@@ -189,16 +215,15 @@ export const Landing = () => {
             src={require("../../image/me.jpg")}
           />
 
-          <p className="titleName">{text}</p>
+          {/* <p className="titleName">{text}</p>
           <p className="titleTarget">{text1}</p>
-          <p className="titleDesc">
-            {slogon}
-            {/* I love to make ideas live. I make
-            stunning, creative and dynamic websites and apps. Hope once if you
-            will give me change to deploy your project I won't make you
-            disappoint. */}
-          </p>
-          <button className="button">
+          <p className="titleDesc">{slogon}</p> */}
+          <button
+            onClick={() => {
+              onplayvideo(true);
+            }}
+            className="button"
+          >
             Video
             <img
               style={{ marginLeft: "10px" }}
@@ -293,7 +318,7 @@ export const Landing = () => {
       <div style={{ background: "#fff" }}>
         <Gallery />
       </div>
-      <MyWorks WindowWidth={WindowWidth} height={height} />
+      {/* <MyWorks WindowWidth={WindowWidth} height={height} /> */}
       <ContactMe />
     </div>
   );
